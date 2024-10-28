@@ -1,0 +1,396 @@
+/* Define new colors */
+:root {
+    --hacker-red: #ff0000; /* Bright red color */
+    --white: #ffffff; /* White color */
+}
+/* Navigation Bar Styles */
+#navbar {
+    position: fixed; /* Make the navbar fixed to the top */
+    top: 0; /* Position it at the top of the viewport */
+    right: 20px; /* Keep it on the right side */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    border: 2px solid var(--hacker-red); /* Red glowing border */
+    box-shadow: 0 0 10px var(--hacker-red); /* Red glowing shadow */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Navigation Content */
+.nav-content {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Flexbox for links */
+    gap: 15px; /* Space between links */
+}
+
+.glow-link {
+    color: var(--hacker-red); /* Red color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold font */
+    text-shadow: 0 0 10px var(--hacker-red); /* Glowing effect */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+/* Hover Effect for Links */
+.glow-link:hover {
+    color: var(--white); /* Change to white on hover */
+}
+
+/* Divider Line */
+.nav-divider {
+    height: 1px; /* Height of the line */
+    background-color: var(--hacker-red); /* Red color for the divider */
+    margin: 10px 0; /* Margin around the line */
+}
+
+/* Text below the divider */
+.nav-text {
+    color: var(--white); /* White text color */
+    font-size: 14px; /* Smaller font size */
+    text-align: center; /* Center the text */
+}
+
+/* Add this CSS rule for smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+section {
+    padding: 50px 0;
+    background-color: var(--white); /* Set section background to white */
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust this height as needed */
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    border: 5px solid var(--hacker-red); /* Red glowing border */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.top-image {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+    width: 200px;
+    height: auto;
+}
+
+.main-image {
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+    width: 400px;
+    height: auto;
+}
+
+.links {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.glow-link {
+    color: var(--hacker-red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 0 0 10px var(--hacker-red);
+    border: 2px solid var(--hacker-red);
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-link:hover {
+    background-color:  rgb(0, 255, 0);
+    color: var(--white); /* Change to white on hover */
+    box-shadow: 0 0 30px var(--hacker-red);
+}
+
+/* Divider with scrolling text */
+#divider {
+    background-color: rgb(0, 255, 0);
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-banner {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.scrolling-banner p {
+    color:rgb(255, 255, 255)/* Slightly transparent white background */;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 0 0 10px var(--hacker-red);
+}
+
+/* About Us Section */
+#about-us {
+    text-align: center;
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Replace with your image path */
+    border: 5px solid var(--hacker-red); /* Red glowing border */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+    padding: 50px 0; /* Padding for the section */
+}
+
+.glow-title {
+    color: var(--hacker-red);
+    text-shadow: 0 0 15px var(--hacker-red);
+    font-size: 36px;
+    margin-bottom: 40px; /* Space below title */
+}
+
+.container-wrapper {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Align containers horizontally */
+    justify-content: center; /* Center containers in the row */
+    gap: 50px; /* Space between containers */
+}
+
+.container {
+    width: 300px; /* Fixed width for each container */
+    padding: 20px; /* Padding inside each container */
+    border: 5px solid var(--hacker-red); /* Red border for containers */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+    background-color:rgb(0 89 16)/* Slightly transparent white background */
+}
+
+.mini-title {
+    color:rgb(255, 255, 255)/* Slightly transparent white background */;
+    text-shadow: 0 0 10px var(--hacker-red);
+    font-size: 20px;
+    margin-bottom: 10px; /* Space below mini-title */
+}
+
+.container p {
+    color: var(--white); /* Text color */
+    font-size: 16px; /* Font size for paragraph */
+    text-align: center; /* Center text */
+}
+
+/* $DEGAI Scrolling Banner */
+#degen-banner {
+    background-color: rgb(0, 255, 0);
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-degen-banner {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-degen-text 5s linear infinite;
+}
+
+@keyframes scroll-degen-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.scrolling-degen-banner p {
+    color:rgb(255, 255, 255)/* Slightly transparent white background */;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 0 0 10px var(--hacker-red);
+}
+
+/* Degen AI Intelligence Section */
+#degen-ai {
+    text-align: center;
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Replace with your image path */
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+}
+
+.hacker-simulator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#hacker-input {
+    width: 600px;
+    height: 200px;
+    background-color:rgb(0 89 16)/* Slightly transparent white background */;
+    color:rgb(255, 255, 255)/* Slightly transparent white background */;
+    border: 5px solid var(--hacker-red);
+    box-shadow: 0 0 20px var(--hacker-red);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+#hacker-input::placeholder {
+    color:rgb(255, 255, 255)/* Slightly transparent white background */;
+    opacity: 0.7;
+}
+
+/* Scrolling Banner Divider for DEGAINOMICS */
+#degainomics-divider {
+    background-color: rgb(0, 255, 8); /* Background color for divider */
+    border:  rgb(0, 255, 8)/* Slightly transparent white background */; /* Red glowing border */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+    height: 30px; /* Short height for the divider */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Short Banner Style */
+.short-banner {
+    text-align: center;
+}
+
+.short-banner p {
+    color: rgb(255, 255, 255)/* Slightly transparent white background */; /* Text color */
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    text-shadow: 0 0 10px var(--hacker-red); /* Glowing effect */
+}
+
+/* DEGAINOMICS Section */
+#degainomics {
+    text-align: center; /* Center text in the section */
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Replace with your image path */
+    border: 5px solid var(--hacker-red); /* Red glowing border */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+    padding: 50px 0; /* Padding for the section */
+}
+
+.degcontainer-wrapper {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Vertically align containers */
+    align-items: center; /* Center items */
+    margin-top: 20px; /* Space above */
+}
+
+.degcontainer {
+    background-color: rgb(0 89 16) ;
+    color: var(--white); /* Text color */
+    padding: 15px; /* Padding inside each container */
+    margin: 10px 0; /* Vertical spacing */
+    border: 3px solid var(--hacker-red); /* Red border for containers */
+    box-shadow: 0 0 10px var(--hacker-red); /* Red glowing shadow */
+    width: 80%; /* Adjust width as needed */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover Effect for Containers */
+.degcontainer:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.mini-title {
+    font-weight: 600; /* Bold for mini-title */
+    color: var(--hacker-red); /* Mini-title color */
+    margin: 0 0 10px; /* Spacing below mini-title */
+}
+/* New Image Gallery Section Styles */
+#image-gallery {
+    text-align: center;
+    background-image: url('images/Progetto\ senza\ titolo\ \(6\).gif'); /* Replace with your image path */
+    border: 5px solid var(--hacker-red); /* Red glowing border */
+    box-shadow: 0 0 20px var(--hacker-red); /* Red glowing shadow */
+    padding: 50px 0; /* Padding for the section */
+}
+
+/* Divider for Image Gallery */
+.divider {
+    height: 1px; /* Reduced height of the divider */
+    background-color: var(--hacker-red); /* Red color for the divider */
+    margin: 10px 0; /* Margin around the line */
+}
+
+/* Image Grid Layout */
+.image-grid {
+    display: grid; /* Use CSS grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between images */
+    padding: 0 20px; /* Padding for the grid */
+}
+
+/* Image Styles */
+.image-grid img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid var(--hacker-red); /* Red border for images */
+    box-shadow: 0 0 10px var(--hacker-red); /* Red glowing shadow */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Glow Title for Image Gallery */
+.glow-title {
+    color: var(--hacker-red); /* Red color for the title */
+    text-shadow: 0 0 15px var(--hacker-red); /* Glowing effect */
+    font-size: 36px; /* Font size for title */
+    margin-bottom: 10px; /* Space below title */
+}
+.audio-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .audio-btn:focus {
+    outline: none;
+  }
+  
